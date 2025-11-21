@@ -348,6 +348,13 @@ body {
 /* ================================================
    =================== Menü =======================
    ==============================================*/
+html {
+  scroll-behavior: smooth;
+}
+
+#galeri {
+  scroll-margin-top: 300px;
+}
 
 .menu-section {
   padding: 80px 0;
@@ -562,7 +569,7 @@ body {
 }
 
 .contact-actions .btn-reserve.whatsapp i {
-  color: #25d366;
+  color: var(--accent);
 }
 .contact-actions .btn-reserve.phone i {
   color: var(--accent);
@@ -754,6 +761,7 @@ body {
   /* MENU */
   .menu-section {
     padding: 50px 0;
+    min-height: 100vh;
   }
 
   .menu-title {
@@ -827,12 +835,10 @@ body {
 
   .call-us-container {
     flex-direction: column;
-    width: 100%;
   }
 
   .call-us-btn-whatsapp,
   .call-us-btn-phone {
-    width: 100%;
     text-align: center;
   }
 }
@@ -858,18 +864,249 @@ body {
   .hero-call {
     font-size: 1rem;
   }
-
+  .know-us-title {
+    font-size: 1.7rem;
+  }
+  .know-us-cards {
+    grid-template-columns: 1fr; /* 3 yerine 1 kolon */
+    gap: 18px; /* daha dar boşluk */
+    max-width: 90%; /* yanlarda boşluk kalsın */
+  }
+  .know-us-card {
+    padding: 12px;
+  }
+  .know-us-card img {
+    height: 150px; /* 300px → 200px mobil için */
+    border-radius: 8px;
+  }
+  .know-us-card h3 {
+    font-size: 1.1rem;
+  }
   /* ABOUT */
   .about-us-subtitle {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .about-us-description {
     font-size: 1rem;
   }
+  .call-us-title {
+    font-size: 1.5rem;
+  }
+  .call-us-subtitle {
+    font-size: 1rem;
+  }
+  .call-us-container {
+    width: 100%;
+  }
+  .menu-title {
+    font-size: 1.7rem;
+    padding: 20px 0;
+  }
+  .category-title {
+    font-size: 1.5rem;
+  }
 
-  /* KNOW US (daha küçük resim) */
+  .menu-category {
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+  .menu-card {
+    flex-direction: row;
+    padding: 14px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+
+  .menu-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 14px;
+  }
+
+  .menu-header {
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
+
+  .menu-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .menu-header span {
+    font-size: 1rem;
+  }
+
+  .menu-info p {
+    font-size: 0.9rem;
+  }
+  .gallery-section {
+    padding: 50px 0;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .gallery-grid {
+    padding: 0 10px;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Daha küçük kartlar */
+    gap: 15px;
+  }
+
+  .gallery-item img {
+    height: 180px; /* 250px → 180px */
+  }
+}
+
+@media (max-width: 400px) {
+  /* HERO */
+  .hero {
+    padding: 30px 10px;
+    height: 55vh;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-call {
+    font-size: 0.9rem;
+  }
+
+  /* KNOW US */
+  .know-us-title {
+    font-size: 1.5rem;
+  }
+
+  .know-us-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 95%;
+  }
+
+  .know-us-card {
+    padding: 10px;
+  }
+
   .know-us-card img {
-    height: 220px;
+    height: 120px; /* daha kompakt */
+    border-radius: 6px;
+  }
+
+  .know-us-card h3 {
+    font-size: 1rem;
+  }
+
+  /* ABOUT */
+  .about-us-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .about-us-description {
+    font-size: 0.9rem;
+  }
+
+  .call-us-btn-whatsapp,
+  .call-us-btn-phone {
+    font-size: 0.94rem;
+  }
+  .call-us-title {
+    font-size: 1.3rem;
+  }
+
+  .call-us-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .call-us-container {
+    width: 100%;
+  }
+
+  /* MENU */
+  .menu-title {
+    font-size: 1.5rem;
+    padding: 15px 0;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+  }
+
+  .menu-category {
+    padding: 0 8px;
+    margin-bottom: 35px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .menu-card {
+    flex-direction: row;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+
+  .menu-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+  }
+
+  .menu-header h3 {
+    font-size: 1rem;
+  }
+
+  .menu-header span {
+    font-size: 0.9rem;
+  }
+
+  .menu-info p {
+    font-size: 0.85rem;
+  }
+
+  /* GALLERY */
+  .gallery-section {
+    padding: 40px 0;
+  }
+
+  .gallery-title {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  .gallery-grid {
+    padding: 0 8px;
+    grid-template-columns: 1fr; /* tek kolon */
+    gap: 12px;
+  }
+
+  .gallery-item img {
+    height: 150px; /* daha küçük */
+  }
+  .hero-call a {
+    font-size: 0.94rem;
+  }
+  .gallery-btn {
+    padding: 7px 16px;
+    font-size: 0.9rem;
+    margin: 4px;
   }
 }
